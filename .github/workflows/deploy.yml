@@ -28,7 +28,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+  run: npm run build
+  env:
+    VITE_OPENWEATHER_API_KEY: ${{ secrets.VITE_OPENWEATHER_API_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
